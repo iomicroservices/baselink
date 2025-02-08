@@ -101,15 +101,9 @@
 <body>
 	
 <!-- Header START -->
-<header id="header" class="header-sticky header-absolute">
-<script>
-	fetch('/components/header.html')
-		.then(response => response.text())
-		.then(data => {
-			document.getElementById('header').innerHTML = data;
-		});
-</script>
-</header>
+
+<custom-header></custom-header>
+
 <!-- Header END -->
 
 <!-- **************** MAIN CONTENT START **************** -->
@@ -1067,6 +1061,9 @@ Footer END -->
 <!--Vendors-->
 <script src="assets/vendor/ityped/index.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Load header component -->
+<script src="components/custom-header.js"></script>
 
 <!-- Theme Functions -->
 <script src="assets/js/functions.js"></script>

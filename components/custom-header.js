@@ -1,5 +1,6 @@
-<!-- Header START -->
-
+const template = document.createElement("template");
+template.innerHTML = `
+<header id="header" class="header-sticky header-absolute">
 	<!-- Logo Nav START -->
 	<nav class="navbar navbar-expand-xl">
 		<div class="container">
@@ -415,5 +416,16 @@
 		</div>
 	</nav>
 	<!-- Logo Nav END -->
+</header>`
+;
 
-<!-- Header END -->
+class CustomHeader extends HTMLElement {
+constructor(){
+super();
+
+const clone = template.content.cloneNode(true);
+this.appendChild(clone);
+}
+}
+
+window.customElements.define("custom-header", CustomHeader);
